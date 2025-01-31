@@ -1,0 +1,64 @@
+
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .profile-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            border-radius: 8px; /* Rounded corners for the image */
+            overflow: hidden; /* Ensure image fits within container */
+        }
+        .profile-image img {
+            width: 100%;
+            height: auto;
+            display: block; /* Prevents a small space below the image */
+        }
+        .about-me {
+            text-align: center;
+        }
+        /* Responsive image handling using <picture> */
+        .profile-image picture img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) { /* Tablet and smaller */
+            .profile-image {
+                max-width: 300px;
+            }
+        }
+        @media (min-width: 992px) { /* Laptop and larger */
+            .profile-image {
+                max-width: 500px;
+            }
+        }
+
+        /* Style for audio and video elements */
+        audio, video {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        /* Style for iframe (example: embedded YouTube video) */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
